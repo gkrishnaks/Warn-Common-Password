@@ -1,9 +1,9 @@
 {
 
-  "description": "Shows a warning notification if you enter a password in any Password field that matches any in 1 million common passwords. Works entirely offline.",
+  "description": "Shows a warning notification if you enter a password, in any Password field, that is present in 1 million common passwords. It works entirely offline and never makes any network request.",
   "manifest_version": 2,
   "name": "Warn Common Password",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage_url": "https://github.com/gkrishnaks/",
   "icons": {
     "48": "icons/lockIcon.png"
@@ -19,7 +19,7 @@
   },
 
   "permissions": [
-    "notifications"
+    "notifications","storage"
   ],
 
   "content_scripts": [{
