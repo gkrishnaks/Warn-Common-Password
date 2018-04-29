@@ -30,16 +30,18 @@ function worker() {
 worker();
 
 loadworker.onmessage = function(e) {
-dict = e.data;
+
+    dict=LZString.decompressFromUTF16(e.data).split("=+=")
+//    console.log(dict);
 //console.log(dict);
  // =+= because when we go a split again at comma, will cause issues
   //...as some passwords in the list have comma in them
-  let dictstring = dict.join("=+=");
+/*  let dictstring = dict.join("=+=");
   let compressed = LZString.compressToUTF16(dictstring);
 
   console.log(compressed);
   chrome.storage.local.set({compressed:compressed});
-setup();
+setup();*/ 
 
 //  console.log(compressed); 
 
@@ -56,13 +58,13 @@ setup();
   //console.log(dict); 
 }
 
-function setup(){
+/*function setup(){
   chrome.storage.local.get('compressed',function(obj){
     var k=LZString.decompressFromUTF16(obj.compressed);
     dict=k.split("=+=")
     console.log(dict);
   })
-}
+}*/
 
 
 function notify(request, sender) {
