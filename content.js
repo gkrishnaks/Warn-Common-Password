@@ -68,7 +68,7 @@ function checkpassword(event) {
     
   // Without this condition below, notification will keep showing up 
   // Scenario - user enters "password" as their password - and notification is shown thrice - for "passwo", "passwor" and "password"
-  // We need to show notifications again when they use backspace to clear out what they entered.
+  // We need not show notifications again when they use backspace to clear out what they entered.
     
   if (event.type === "keyup" && (event.key === "Backspace" || event.key === "Delete" || event.key === "Control")) {
     //  console.log(event.key);
