@@ -32,6 +32,8 @@ worker();
 loadworker.onmessage = function(e) {
 
     dict=LZString.decompressFromUTF16(e.data).split("=+=")
+loadworker.terminate();
+loadworker=undefined;
 //    console.log(dict);
 //console.log(dict);
  // =+= because when we go a split again at comma, will cause issues
