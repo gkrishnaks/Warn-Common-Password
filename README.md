@@ -42,5 +42,5 @@ TODO
 2) Find a way to use a compression algorithm to compress data.min.js and decompress in code to reduce addon size and increase word list size 
 (currently it's 0.5 Million words, maybe increase it later if we compress. We can use lz-string.js..)
 
-3) Add settings page to let user choose wordlist size - if they are on slower device (maybe old android device running Firefox), they can choose top 300 thousand instead of 1 Million, for example.
+3) Add settings page to let user choose wordlist size - if they are on slower device (maybe old android device running Firefox), they can choose top 200 thousand instead of 0.5 Million, for example.
 
