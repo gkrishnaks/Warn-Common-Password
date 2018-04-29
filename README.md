@@ -16,7 +16,9 @@ This addon works entirely offline and does not make any network request. The "co
 
 This extension is licensed under GPLv3 (GNU GENERAL PUBLIC LICENSE - version 3)
 
-### TODO ### 
+---
+
+TODO
 
 1) Benchmark against Trie.js - Done - initial trie setup takes a few seconds for big list of 1 million words .. indexof or includes seems better as number of times search to be performed is very small.
 
