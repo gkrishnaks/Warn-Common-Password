@@ -31,6 +31,8 @@ worker();
 
 loadworker.onmessage = function(e) {
   dict = e.data;
+loadworker.terminate();
+loadworker=undefined;
 }
 
 
