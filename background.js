@@ -68,8 +68,8 @@ function notify(request, sender) {
   var list = trie.find(request.value);
   let total = performance.now() - timer;
   console.log("trie find took " + total + " ms");
-  console.log(list.toString());
-
+	
+ // trie.find returns null if not found.
   if (list != null) {
     chrome.notifications.create({
       "type": "basic",
