@@ -31,7 +31,7 @@ if (inputcollection != null) {
 
   // Now, we attach 2 event types listeners
   // Input - if user is going to use password manager or copy paste password from somewhere
-  // Keydown - if user enters using keyboard
+  // KeyUp - if user enters using keyboard
 
   if (index.length > -1) {
     for (let k = 0; k < index.length; k++) {
@@ -42,42 +42,38 @@ if (inputcollection != null) {
     }
   }
 }
+/*
 let previousPassword = ' ';
 let i = 0;
-let key;
-/*
+let key; 
+
 function keydownhandle(event) {
   key = event.key; //alert('keydown event\n\n' + 'key: ' + keyName); });
   i += 1;
 }
 */
 
-
-// Add or remove from Excludes
-//console.log(string);
-
 function checkpassword(event) {
   //if user pasted a password into password field - we can run this function only once - after that, listen to keyup.
   //Let's not worry if user pastes same password again - to avoid repeated notifications sent to device
   event.target.removeEventListener("input", checkpassword);
 
-  // if user starts typing, we can remove the "input" type listener as we can assume they are not going to paste..
-  if (event.type == "keyup") {
-    //  console.log("event type  keyup");
-    //event.target.removeEventListener("input", checkpassword);
-  }
+  // Nearly all websites don't allow passwords less than 6 characters, or we assume that!
+  // So No need to look in the common words list until user enters 6 characters
+
   if (event.target.value.length < 6) {
     return;
   }
   //previousPassword=value;
+    
+  // Without this condition below, notification will keep showing up 
+  // Scenario - user enters "password" as their password - and notification is shown thrice - for "passwo", "passwor" and "password"
+  // We need to show notifications again when they use backspace to clear out what they entered.
+    
   if (event.type === "keyup" && (event.key === "Backspace" || event.key === "Delete" || event.key === "Control")) {
     //  console.log(event.key);
     return;
   }
-
-  // Most websites don't allow passwords less than 6 characters
-  // No need to look in the common words array until that
-
 
 
   chrome.runtime.sendMessage({
