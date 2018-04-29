@@ -1,0 +1,8 @@
+TODO
+
+1) Benchmark against Trie.js - Done - initial trie setup takes some seconds - indexof or includes seems better..
+
+2) Use a compression algorithm to compress data.min.js and decompress in code to reduce addon size and increase word list size
+(currently its 1Million, maybe we can increase that limit once we compress)
+
+3) Add a popup which provides setting switch - to limit the Search within top 300000 common passwords only - as it will help older devices or low-end android devices running Firefox.
