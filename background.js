@@ -28,9 +28,19 @@ function worker() {
   loadworker.postMessage([absUrl, 'json']);
 }
 worker();
+var trie = new Trie();
 
 loadworker.onmessage = function(e) {
   dict = e.data;
+  let i = 0,
+    l = dict.length;
+  let before = performance.now();
+  for (; i < l; ++i) {
+    trie.add(dict[i]);
+  }
+  let time = performance.now() - before;
+  console.log("time to load data into trie " + time + " ms");
+
 }
 
 
@@ -47,14 +57,20 @@ function notify(request, sender) {
   } else {
     searchDict = dict;
   }
+
   //let value=request.value;
   //var before = performance.now();
   //var k = searchDict.indexOf(value);
 
   // var time = performance.now() - before;
   // console.log("time to search = "  + time + " ms");
+  let timer = performance.now();
+  var list = trie.find(request.value);
+  let total = performance.now() - timer;
+  console.log("trie find took " + total + " ms");
+  console.log(list.toString());
 
-  if (searchDict.indexOf(request.value) > -1) {
+  if (list != null) {
     chrome.notifications.create({
       "type": "basic",
       "title": "Warning: Weak, Common Password",

@@ -15,11 +15,11 @@
     }
   },
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["trie.js", "background.js"]
   },
 
   "permissions": [
-    "notifications","storage"
+    "notifications", "storage"
   ],
 
   "content_scripts": [{
