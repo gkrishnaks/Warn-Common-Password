@@ -36,5 +36,7 @@ function loadData(absUrl, returnType) {
 
 self.onmessage = function(e) {
   var workerResult = loadData(e.data[0], e.data[1]);
-  postMessage(workerResult.commonPasswords);
+postMessage(workerResult.commonPasswords);
+//   postMessage(workerResult.commonPasswords);
+
 }

@@ -15,11 +15,11 @@
     }
   },
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["lz-string.min.js", "background.js"]
   },
 
   "permissions": [
-    "notifications","storage"
+    "notifications", "storage"
   ],
 
   "content_scripts": [{
