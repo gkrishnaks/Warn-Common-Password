@@ -1,5 +1,10 @@
 # Warn Common Password
 
+***
+Install in Firefox / Firefox for Android : [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/warn-common-password/)
+
+Install in Chrome/Chromium : [Chrome Webstore](https://chrome.google.com/webstore/detail/warn-common-password/pgamlkknabdaipnfclecbdflddpnedco)
+
 ## About ##
 
 This simple browser extension shows a warning notification to the user when they enter a common password in any Password or Security answer field, in any website.
