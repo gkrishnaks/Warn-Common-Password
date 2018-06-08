@@ -16,10 +16,11 @@ uploadExtension();  // This just uploads - will not publish yet.
 function uploadExtension(){
 let cmd = getUploadCommand();
 exec(cmd, (error, stdout, stderr) => {
-    console.log(`stdout: ${stdout}`);
-    console.log(`stderr: ${stderr}`);
+   // console.log(`stdout: ${stdout}`);
+  //  console.log(`stderr: ${stderr}`);
     if (error !== null) {
-      console.log(`exec error: ${error}`);
+     // console.log(`exec error: ${error}`);
+      console.log("uploadExtension failed in exec error");
       process.exit(1);
     } else {
       console.log('Successfully Uploaded the zip to chrome web store');
@@ -34,7 +35,8 @@ function publishExtension() {
     console.log(`stdout: ${stdout}`);
     console.log(`stderr: ${stderr}`);
     if (error !== null) {
-      console.log(`exec error: ${error}`);
+      //console.log(`exec error: ${error}`);
+      console.log("exec error in PublishExtension");
       process.exit(1);
     } else {
       console.log('Successfully published the newer version');
