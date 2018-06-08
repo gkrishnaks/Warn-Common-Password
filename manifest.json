@@ -1,6 +1,6 @@
 {
 
-  "description": "Shows a warning notification if you enter a password, in any Password field, that is present in 500000 common passwords. It works entirely offline and never makes any network request.",
+  "description": "Displays warning notification if word entered in any password field is present in 500000 common passwords. Works entirely offline.",
   "manifest_version": 2,
   "name": "Warn Common Password",
   "version": "0.0.4",
