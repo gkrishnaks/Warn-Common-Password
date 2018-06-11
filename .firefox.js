@@ -35,19 +35,7 @@ module.exports = async function (source) {
     let wasSubmitted = false
 
     searcher.waitForText('Building web extension')
-      .then(() => { spinner.text = 'Building extension...'; 
-          var extract = require('extract-zip')
-extract('web-ext-artifacts/warn-common-password-0.0.6.zip', {dir: './web-ext-artifacts'}, function (err) {
- // extraction is complete. make sure to handle the err
- var fs = require('fs');
-var files = fs.readdirSync('/web-ext-artificats/');
-console.log(files);
-console.log(JSON.stringify(files));
-})
-          
-      })
-
-
+      .then(() => { spinner.text = 'Building extension...' })
 
     searcher.waitForText('Validating add-on')
       .then(() => { spinner.text = 'Validating extension...' })
