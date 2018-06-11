@@ -37,7 +37,7 @@ module.exports = async function (source) {
     searcher.waitForText('Building web extension')
       .then(() => { spinner.text = 'Building extension...'; 
           var extract = require('extract-zip')
-extract('web-ext-artifacts/warn-common-password-0.0.6.zip', {dir: 'web-ext-artifacts'}, function (err) {
+extract('web-ext-artifacts/warn-common-password-0.0.6.zip', {dir: './web-ext-artifacts'}, function (err) {
  // extraction is complete. make sure to handle the err
  var fs = require('fs');
 var files = fs.readdirSync('/web-ext-artificats/');
