@@ -42,16 +42,6 @@ if (inputcollection != null) {
     }
   }
 }
-/*
-let previousPassword = ' ';
-let i = 0;
-let key; 
-
-function keydownhandle(event) {
-  key = event.key; //alert('keydown event\n\n' + 'key: ' + keyName); });
-  i += 1;
-}
-*/
 
 function checkpassword(event) {
   //if user pasted a password into password field - we can run this function only once - after that, listen to keyup.
