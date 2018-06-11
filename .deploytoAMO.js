@@ -1,13 +1,12 @@
-//Built upon https://github.com/LinusU/wext-shipit 
-
 #!/usr/bin/env node
+//Built upon https://github.com/LinusU/wext-shipit 
 
 require('dotenv').config()
 
 const neodoc = require('neodoc')
 
-const firefox = require('./deploy/firefox')
-const UserError = require('./deploy/user-error')
+const firefox = require('./firefox')
+const UserError = require('./user-error')
 
 const usage = `
 Usage:
