@@ -4,7 +4,7 @@ const execa = require('execa')
 const ora = require('ora')
 const StreamSearch = require('text-stream-search')
 
-const UserError = require('./user-error')
+const UserError = require('./.user-error')
 
 const webextBinPath = require.resolve('.bin/web-ext')
 
