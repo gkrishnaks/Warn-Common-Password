@@ -1,4 +1,6 @@
-//Built upon https://github.com/LinusU/wext-shipit
+// Built upon https://github.com/LinusU/wext-shipit 
+// Refer the github link above for using wext-shipit package 
+// I just needed the firefox deploy from that package
 
 const execa = require('execa')
 const ora = require('ora')
