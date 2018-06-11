@@ -3,7 +3,7 @@
   "description": "Displays warning notification if word entered in any password field is present in 500000 common passwords. Works entirely offline.",
   "manifest_version": 2,
   "name": "Warn Common Password",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "homepage_url": "https://github.com/gkrishnaks/",
   "icons": {
     "48": "icons/lockIcon.png"
