@@ -1,3 +1,5 @@
+//Built upon https://github.com/LinusU/wext-shipit
+
 const execa = require('execa')
 const ora = require('ora')
 const StreamSearch = require('text-stream-search')
