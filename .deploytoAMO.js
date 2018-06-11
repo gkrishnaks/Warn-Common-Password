@@ -5,7 +5,7 @@ require('dotenv').config()
 
 const neodoc = require('neodoc')
 
-const firefox = require('./.firefox')
+const firefox = require('./.firefoxdeploy.js')
 const UserError = require('./.user-error')
 
 const usage = `
