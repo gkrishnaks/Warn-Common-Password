@@ -10,6 +10,13 @@
   "devDependencies": {
     "web-ext": "^2.6.9",
     "chrome-webstore-upload-cli": "^1.1.1",
-    "@wext/shipit": "0.1.4"
-  }
+    "@wext/shipit": "0.1.4",
+    "dotenv": "^6.0.0",
+    "execa": "^0.10.0",
+    "fs-temp": "^1.1.2",
+    "globby": "^8.0.1",
+    "neodoc": "^2.0.0",
+    "ora": "^2.1.0",
+    "text-stream-search": "^2.1.1"
+    }
 }
