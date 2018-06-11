@@ -16,5 +16,5 @@ deployExtension:
 #    - CLIENT_ID=${CLIENT_ID} CLIENT_SECRET=${CLIENT_SECRET} EXTENSION_ID=${EXTENSION_ID} REFRESH_TOKEN=${REFRESH_TOKEN} node ./.deploytoChromeStore.js
     - node ./.deploytoAMO.js firefox .
     - cd web-ext-artifacts; mkdir extract; cd ..;
-    - ./node_modules/extract-zip web-ext-artifacts/*.zip extract
+    - ./node_modules/.bin/extract-zip web-ext-artifacts/*.zip extract
     - cd extract; ls -a;
