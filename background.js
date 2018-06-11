@@ -68,6 +68,4 @@ function notify(request, sender) {
   }
 }
 
-
-
 chrome.runtime.onMessage.addListener(notify);
