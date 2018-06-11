@@ -2,8 +2,7 @@ image: node:8.0.0
 
 before_script:
   - yarn
-  - npm install extract-zip
-  
+
 stages:
   - deployExtension
 
