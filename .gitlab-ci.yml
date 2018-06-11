@@ -2,8 +2,8 @@ image: node:8.0.0
 
 before_script:
   - yarn
-  - apt-get install unzip
-
+  - npm install extract-zip
+  
 stages:
   - deployExtension
 
@@ -17,5 +17,5 @@ deployExtension:
 #    - CLIENT_ID=${CLIENT_ID} CLIENT_SECRET=${CLIENT_SECRET} EXTENSION_ID=${EXTENSION_ID} REFRESH_TOKEN=${REFRESH_TOKEN} node ./.deploytoChromeStore.js
     - node ./.deploytoAMO.js firefox .
     - cd web-ext-artifacts; mkdir extract;
-    - unzip *.zip -d extract;
+    - extract-zip *.zip extract
     - cd extract; ls -a;
