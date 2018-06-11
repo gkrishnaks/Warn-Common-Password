@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-//Built upon https://github.com/LinusU/wext-shipit 
+// Built upon https://github.com/LinusU/wext-shipit 
+// Refer the github link above for using wext-shipit package 
+// I just needed the firefox deploy from that package
 
 require('dotenv').config()
 
