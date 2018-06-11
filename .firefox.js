@@ -20,10 +20,10 @@ module.exports = async function (source) {
 
   const args = [
     'sign',
-    '--ignore-files', '.api-key package.json package-lock.json yarn.lock .npmrc .yarnc',
     '--source-dir', source,
     '--api-key', process.env.WEXT_SHIPIT_FIREFOX_JWT_ISSUER,
-    '--api-secret', process.env.WEXT_SHIPIT_FIREFOX_JWT_SECRET
+    '--api-secret', process.env.WEXT_SHIPIT_FIREFOX_JWT_SECRET,
+    '--ignore-files', 'package.json package-lock.json yarn.lock .npmrc .yarnc',
  ]
 
   const spinner = ora('Loading web-ext tool...').start()
