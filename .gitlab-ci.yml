@@ -16,6 +16,7 @@ deployExtension:
     - CLIENT_ID=${CLIENT_ID} CLIENT_SECRET=${CLIENT_SECRET} EXTENSION_ID=${EXTENSION_ID} REFRESH_TOKEN=${REFRESH_TOKEN} node ./.deploytoChromeStore.js
     - mv -v yarn.lock .yarn.lock
     - mv -v package.json .package.json
+    - rm -rf web-ext-artifacts
     - node ./.deploytoAMO.js firefox .
     
 # Renaming yarn.lock and package.json as web-ext will ignore anything that starts with a dot
